@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HelloWorldLayer.h"
+#import "Tetris.h"
 
 @implementation TetrisAppDelegate
 @synthesize window=window_, glView=glView_;
@@ -23,13 +23,13 @@
 	// EXPERIMENTAL stuff.
 	// 'Effects' don't work correctly when autoscale is turned on.
 	// Use kCCDirectorResize_NoScale if you don't want auto-scaling.
-	[director setResizeMode:kCCDirectorResize_AutoScale];
+	[director setResizeMode:kCCDirectorResize_NoScale];
 	
 	// Enable "moving" mouse event. Default no.
 	[window_ setAcceptsMouseMovedEvents:NO];
 	
 	
-	[director runWithScene:[HelloWorldLayer scene]];
+	[director runWithScene:[Tetris scene]];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) theApplication
